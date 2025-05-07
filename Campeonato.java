@@ -16,11 +16,11 @@ public class Campeonato {
     }
 
     public void realizaJogo(TimeFutebol timeCasa, TimeFutebol timeVisitante) {
-        if (timeCasa.getEstiloJogo() == 0 && timeVisitante.getEstiloJogo() == 1) {
-            timeCasa.venceu();
-            timeVisitante.perdeu();
+        if (timeCasa.getEstiloJogo() == 1 && timeVisitante.getEstiloJogo() == 0) {
+            timeCasa.perdeu();
+            timeVisitante.venceu();
             System.out.println("Time " + timeCasa.getNome() + " venceu o jogo contra " + timeVisitante.getNome());
-        } else if (timeCasa.getEstiloJogo() == 1 && timeVisitante.getEstiloJogo() == 0) {
+        } else if (timeVisitante.getEstiloJogo() == 1) {
             timeCasa.perdeu();
             timeVisitante.venceu();
             System.out.println("Time " + timeVisitante.getNome() + " venceu o jogo contra " + timeCasa.getNome());
